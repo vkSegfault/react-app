@@ -1,11 +1,9 @@
 FROM node:20-alpine
 
-WORKDIR /react-app
+WORKDIR /app
 
-COPY public/ /react-app/public
-COPY src/ /react-app/src
-COPY package.json /react-app/package.json
+COPY . .
 
 RUN npm install
 
-CMD npm start
+CMD npm run dev
